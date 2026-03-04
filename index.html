@@ -14,7 +14,9 @@
     }
 
     body {
-      background-color: #0d1117;
+      background: radial-gradient(ellipse 80% 60% at 10% 90%, #4a9eff33 0%, transparent 100%),
+                  radial-gradient(ellipse 60% 40% at 90% 10%, #a855f733 0%, transparent 100%),
+                  #0d1117;
       color: #cdd5e0;
       font-family: 'Segoe UI', system-ui, sans-serif;
     }
@@ -71,6 +73,14 @@
     }
 
     .nav-links a:hover { color: #fff; }
+
+    .btn-primary, .btn-outline {
+      transition: all 0.3s ease-in-out;
+    }
+    .btn-primary:hover, .btn-outline:hover {
+      transform: scale(1.03);
+      box-shadow: 0 0 20px rgba(139,92,246,0.3);
+    }
 
     .btn-primary {
       background: #2563eb;
@@ -141,17 +151,19 @@
       50% { opacity: 0.3; }
     }
 
-    .hero-title {
+    .hero-title, .hero-title-gradient {
+      background: linear-gradient(90deg, #a855f7, #4a9eff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      color: transparent;
       font-size: 3rem;
       font-weight: 800;
-      color: #fff;
       line-height: 1.1;
       margin-bottom: 8px;
     }
 
     .hero-title-gradient {
-      font-size: 3rem;
-      font-weight: 800;
       background: linear-gradient(90deg, #4a9eff, #a855f7);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
@@ -343,8 +355,12 @@
     .section-title {
       font-size: 2rem;
       font-weight: 800;
-      color: #fff;
       margin-bottom: 8px;
+      background: linear-gradient(90deg, #a855f7, #4a9eff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      color: transparent;
     }
 
     .section-subtitle {
@@ -819,7 +835,7 @@
       <p class="section-subtitle">My professional journey so far.</p>
 
       <div class="experience-list">
-
+        <div class="timeline-line"></div>
         <div class="experience-card">
           <div>
             <div class="exp-company">AMORA</div>
